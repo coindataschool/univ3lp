@@ -8,9 +8,10 @@ node_url = "https://eth-mainnet.g.alchemy.com/v2/"+alchemy_api_key
 
 # get gas from ethereum block chain
 w3 = Web3(Web3.HTTPProvider(node_url))
-eth_gas_price = w3.eth.gasPrice
+eth_gas_price = w3.eth.gasPrice # unit: Wei
 print("From alchemy node:")
-print('- baseFee', eth_gas_price/1e9)  # -> gwei
+print('- baseFee', w3.fromWei(eth_gas_price, 'gWei')) # -> gwei
+# print('- baseFee', eth_gas_price/1e9)  # -> gwei
 
 # get gas from Etherscan's gas tracker
 # https://etherscan.io/gastracker
