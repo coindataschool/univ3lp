@@ -77,21 +77,3 @@ print('lower tick feeGrowthOutside0X128:', lwr_feeGrowthOutside0 / 2**128 / 10**
 print('lower tick feeGrowthOutside1X128:', lwr_feeGrowthOutside1 / 2**128 / 10**decimals_token1)
 print('upper tick feeGrowthOutside0X128:', upr_feeGrowthOutside0 / 2**128 / 10**decimals_token0)
 print('upper tick feeGrowthOutside1X128:', upr_feeGrowthOutside1 / 2**128 / 10**decimals_token1)
-
-
-# # --- calc fees earned by your position --- #
-# # INCorrect
-# # ref: https://stackoverflow.com/questions/67972849/how-to-understand-the-uniswap-v3-swap-fee-calculation
-
-# def calc_fees(feeGrowthGlobal, feeGrowthOutside_lower, feeGrowthOutside_upper, decimals):
-#     fb_lwr = feeGrowthGlobal - feeGrowthOutside_lower
-#     fa_upr = feeGrowthGlobal - feeGrowthOutside_upper
-#     diff = (feeGrowthGlobal - fb_lwr - fa_upr) / 2**128
-#     return diff*liquidity / (1*10**decimals)
-
-# unitFee0 = calc_fees(feeGrowthGlobal0, lwr_feeGrowthOutside0, upr_feeGrowthOutside0, 8)
-# unitFee1 = calc_fees(feeGrowthGlobal1, lwr_feeGrowthOutside1, upr_feeGrowthOutside1, 18)
-# print(unitFee0)
-# print(unitFee1)
-
-
