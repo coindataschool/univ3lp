@@ -1,0 +1,6 @@
+scripts/scrape_wbtc_weth_price_rng_linear.py
+scripts/scrape_wbtc_weth_price_rng_thread.py
+scripts/scrape_wbtc_weth_top_pos.py
+scripts/helper/__pycache__
+scripts/helper/scrape_price_range.py
+scripts/helper/scrape_top_positions_table.py
