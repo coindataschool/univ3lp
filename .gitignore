@@ -4,3 +4,4 @@ scripts/scrape_wbtc_weth_top_pos.py
 scripts/helper/__pycache__
 scripts/helper/scrape_price_range.py
 scripts/helper/scrape_top_positions_table.py
+data/univ3_top_positions_wbtc_weth.pkl
