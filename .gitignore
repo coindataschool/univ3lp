@@ -1,7 +1,7 @@
-scripts/scrape_wbtc_weth_price_rng_linear.py
-scripts/scrape_wbtc_weth_price_rng_thread.py
-scripts/scrape_wbtc_weth_top_pos.py
-scripts/helper/__pycache__
-scripts/helper/scrape_price_range.py
-scripts/helper/scrape_top_positions_table.py
+scripts/retired
 data/univ3_top_positions_wbtc_weth.pkl
+data/data_mainnet.json
+data/univ3_mainnet_lps_hist_perf.pkl
+data/univ3_mainnet_lps.pkl
+scripts/01-pull-data.py
+scripts/02-prep-data.py
