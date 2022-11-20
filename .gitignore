@@ -1,5 +1,4 @@
 scripts/retired
-data/univ3_top_positions_wbtc_weth.pkl
 data/data_mainnet.json
 data/univ3_mainnet_lps_hist_perf.pkl
 data/univ3_mainnet_lps.pkl
