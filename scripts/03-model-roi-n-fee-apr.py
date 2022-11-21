@@ -207,7 +207,8 @@ for yvar in ['roi', 'log1p_fee_apr']:
         df[xvars_log + xvars_scale + xvars_cat], df[yvar], 
         test_size=0.2, random_state=42)
     print('Training sample size:', len(Xtrain))
-    
+    print('Test sample size:', len(Xtest))
+        
     # run grid search
     grid.fit(Xtrain, ytrain)
     print("Best params:")
