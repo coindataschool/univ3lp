@@ -3,5 +3,5 @@ data/data_mainnet.json
 data/univ3_mainnet_lps_hist_perf.pkl
 data/univ3_mainnet_lps.pkl
 scripts/01-pull-data.py
-scripts/02-prep-data.py
 output
+trial-n-error
