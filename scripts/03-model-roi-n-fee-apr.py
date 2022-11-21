@@ -219,11 +219,12 @@ for yvar in ['roi', 'log1p_fee_apr']:
     # predict 
     df_pred = ytest.to_frame()
     df_pred['xgb_pred'] = grid.predict(Xtest)
-    if yvar == 'log_fee_apr':
-        df_pred = (np.exp(df_pred) - 1).rename(columns={yvar:'fee_apr'})
+    if yvar == 'log1p_fee_apr':
+        df_pred = np.exp(df_pred) - 1
+        df_pred = df_pred.rename(columns={yvar:'fee_apr'})
 
     # save
     model_fname = save_fname_base+'xgbmod-{}.joblib'.format(yvar)
     joblib.dump(grid, '../output/' + model_fname)
-    pred_fname = save_fname_base+'xgbpred-{}.pkl'.format(yvar)
+    pred_fname = save_fname_base+'xgbpred-{}.pkl'.format(yvar.replace('log1p_',''))
     pd.to_pickle(df_pred, '../output/' + pred_fname)
