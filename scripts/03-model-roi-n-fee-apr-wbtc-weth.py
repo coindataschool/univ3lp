@@ -27,7 +27,7 @@ price_upper_cutoff = 60 # upper limit of token0/token1 such as BTCETH
 
 os.makedirs('../png', exist_ok=True)
 os.makedirs('../output', exist_ok=True)
-save_fname_base = 'mainnet-{}-{}-'.format(token0['symbol'], token1['symbol'])
+save_fname_base = '{}-{}-{}-'.format(chain, token0['symbol'], token1['symbol'])
 
 # --- read and filter data --- #
 
