@@ -39,4 +39,4 @@ def run(chain):
 
 if __name__ == "__main__":
     run('mainnet')
-    # run('arbitrum')
+    run('arbitrum')
