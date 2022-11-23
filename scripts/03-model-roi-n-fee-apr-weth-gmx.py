@@ -140,7 +140,7 @@ df['log1p_fee_apr'] = np.log1p(df['fee_apr'])
 
 # print ranges of key variables
 print("Ranges of Sample Data Variables:")
-print("- Age ranges from {:.1f} to {:.1f} days".format(
+print("- Age ranges from {:.3f} to {:.3f} days".format(
     df.age.min(), df.age.max()))
 print("- Deposit ranges from {:.1f} to {:.1f} USD".format(
     df.deposits_value.min(), df.deposits_value.max()))
