@@ -82,6 +82,10 @@ cond8 = (df.price_lower >= price_lower_cutoff) & \
 df = df[cond8]
 len(df)
 
+# drop positions with 0 fee apr
+df = df[df.fee_apr > 0]
+len(df)
+
 # only focus on these columns
 cols = ['fee_tier', 'age', 'in_range', 'deposits_value', 'il', 
         'roi', 'apr', 'fee_apr', # 'pool_apr', # pool_apr is apr_excluding_gas
