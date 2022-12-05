@@ -43,38 +43,28 @@ xgboost models to predict ROI and Fee APRs, and built the following dashboards:
 
 ### Overview
 
-* **Total Estimated Duration:** 18 months
+* **Total Estimated Duration:** 6 months
 * **Total Costs:** $300,000
 
 ### Milestone 1 -- Data Collection and Management
 
-* **Estimated Duration:** 9 months
-* **Costs:** $150,000
+* **Estimated Duration:** 4 months
+* **Costs:** $200,000
 
 | Number | Deliverable |
 | ------------- | ------------- |
 | 1. | Database in ClickHouse Cloud |
 | 2. | ETL workflow in dbt |
 
-### Milestone 2 -- Data Analysis and Visualization
+### Milestone 2 -- Data Analysis, Visualization, Machine Learning
 
-* **Estimated Duration:** 3 months
-* **Costs:** $50,000
+* **Estimated Duration:** 2 months
+* **Costs:** $100,000
 
 | Number | Deliverable |
 | ------------- | ------------- |
 | 1. | Visualize the distributions of ROI, fee APR, and impermanent loss of univ3 positions|
 | 2. | Visualize their relationships  |
-| 3. | Hypothesis Testing |
-| 4. | Ad hoc Statistical Analyses |
-
-### Milestone 3 -- Machine Learning
-
-* **Estimated Duration:** 6 months
-* **Costs:** $100,000
-
-| Number | Deliverable |
-| ------------- | ------------- |
-| 1. | ML models for ROI prediction |
-| 2. | ML models for fee APR prediction |
-| 3. | Data App that allows user to use these models |
+| 3. | ML models for ROI prediction |
+| 4. | ML models for fee APR prediction |
+| 5. | Website for users to use the models and analytics |
