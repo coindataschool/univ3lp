@@ -15,7 +15,7 @@ UniV3 liquidity provision in general.
 
 Uniswap V3 liquidity provision is a major source of real yield in DeFi. It is a 
 weapon sophisticated players use to make millions while degens get rekt due to 
-a lack of analytics/insights performed on complete data at the postion level.
+a lack of analytics/insights performed on complete data at the position level.
 
 At the moment, DeFiLlama provides UniV3 data at the pool level, but not at the 
 position level. Revert Finance gathers positions data, but doesn't make the data 
