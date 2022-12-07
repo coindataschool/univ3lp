@@ -5,7 +5,5 @@ data/univ3_mainnet_lps.pkl
 data/data_arbitrum.json
 data/univ3_arbitrum_lps_hist_perf.pkl
 data/univ3_arbitrum_lps.pkl
-data/v1
-output
-trial-n-error
+output/
 scripts/my-mainnet-wbtc-weth-position.py
