@@ -1,4 +1,4 @@
-scripts/retired
+scripts/retired/
 data/data_mainnet.json
 data/univ3_mainnet_lps_hist_perf.pkl
 data/univ3_mainnet_lps.pkl
