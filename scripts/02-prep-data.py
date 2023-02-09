@@ -58,11 +58,18 @@ def prep_data(raw_data):
 if __name__ == "__main__":
     for chain in ['mainnet', 'arbitrum']:
         # chain = 'arbitrum'
-        fnm = '../data/data_{}.json'.format(chain)
-        if os.path.isfile(fnm):
-            print('Blockchain:', chain)
-            with open(fnm, 'r') as f:
-                raw_data = json.load(f)['data']
-            dd = prep_data(raw_data)
-            pd.to_pickle(dd['current'], '../data/univ3_{}_lps.pkl'.format(chain))
-            pd.to_pickle(dd['historical'], '../data/univ3_{}_lps_hist_perf.pkl'.format(chain))
+        fnms = ['../data/data_{}-v1.json'.format(chain),
+                '../data/data_{}.json'.format(chain)]
+        lst_curr = []; lst_hist = []
+        for fnm in fnms:
+            if os.path.isfile(fnm):
+                print('Blockchain:', chain)
+                with open(fnm, 'r') as f:
+                    raw_data = json.load(f)['data']
+                dd = prep_data(raw_data)
+                lst_curr.append(dd['current'])
+                lst_hist.append(dd['historical'])
+        df_curr = pd.concat(lst_curr).drop_duplicates()
+        df_hist = pd.concat(lst_hist).drop_duplicates()
+        pd.to_pickle(df_curr, '../data/univ3_{}_lps.pkl'.format(chain))
+        pd.to_pickle(df_hist, '../data/univ3_{}_lps_hist_perf.pkl'.format(chain))
