@@ -1,7 +1,9 @@
 scripts/retired/
+data/data_mainnet-v1.json
 data/data_mainnet.json
 data/univ3_mainnet_lps_hist_perf.pkl
 data/univ3_mainnet_lps.pkl
+data/data_arbitrum-v1.json
 data/data_arbitrum.json
 data/univ3_arbitrum_lps_hist_perf.pkl
 data/univ3_arbitrum_lps.pkl
