@@ -8,6 +8,11 @@ This project aims to collect, visualize, analyze, model UniV3 data and present
 the findings to the public. It also aims to teach tools and thinking framework
 that allow users to adopt to their own LP strategies.
 
+Dashboards:
+
+- [Uniswap V3 Screener](https://dune.com/coindataschool/uniswap-v3-pools-volume-fees-tvl-and-fee-apr)
+- [Curated Uniswap V3 Pools](https://dune.com/coindataschool/curated-uniswap-v3-pools-volume-fees-tvl-and-fee-apr)
+
 Apps:
 
 - [Forecast ROI and Fee APR of Univ3 WETH-GMX positions on Arbitrum](https://coindataschool-univ3-roi-prediction-weth-gmx-main-ponc95.streamlit.app/)
@@ -21,3 +26,8 @@ Articles:
 - [Forecast next-hour BTCETH Price with Autoregression](https://open.substack.com/pub/coindataschool/p/univ3-wbtc-weth-lp-strategy-part4?r=1ly8yy&utm_campaign=post&utm_medium=web)
 - [Forecast UMAMIETH Price in the next 1 and 2 hours with ARMA](https://open.substack.com/pub/coindataschool/p/univ3-strategy-part5-umami-weth?r=1ly8yy&utm_campaign=post&utm_medium=web)
 - [AR, MA, and ARMA, When to Use Which?](https://open.substack.com/pub/coindataschool/p/ar-ma-and-arma-when-to-use-which?r=1ly8yy&utm_campaign=post&utm_medium=web)
+- [Forecast MATIC price in the next 1, 2, 3 hours with ARIMA](https://coindataschool.substack.com/p/univ3-strategy-part-6-wmatic-usdc)
+
+Guide:
+
+- Our UniV3 Guide is out and you can purchase [here](https://twitter.com/coindataschool/status/1613886358938058752).
