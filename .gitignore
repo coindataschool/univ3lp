@@ -1,12 +1,8 @@
 scripts/retired/
-data/data_mainnet-v1.json
-data/data_mainnet.json
-data/univ3_mainnet_lps_hist_perf.pkl
-data/univ3_mainnet_lps.pkl
-data/data_arbitrum-v1.json
-data/data_arbitrum.json
-data/univ3_arbitrum_lps_hist_perf.pkl
-data/univ3_arbitrum_lps.pkl
+data/data_mainnet*
+data/univ3_mainnet*
+data/data_arbitrum*
+data/univ3_arbitrum*
 data/mm-eth-cumu-fees.csv
 output/
 scripts/my-mainnet-wbtc-weth-position.py
