@@ -59,6 +59,7 @@ if __name__ == "__main__":
     for chain in ['mainnet', 'arbitrum']:
         # chain = 'arbitrum'
         fnms = ['../data/data_{}-v1.json'.format(chain),
+                '../data/data_{}-v2.json'.format(chain),
                 '../data/data_{}.json'.format(chain)]
         lst_curr = []; lst_hist = []
         for fnm in fnms:
