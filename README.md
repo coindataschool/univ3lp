@@ -13,9 +13,23 @@ Dashboards:
 - [Uniswap V3 Screener](https://dune.com/coindataschool/uniswap-v3-pools-volume-fees-tvl-and-fee-apr)
 - [Curated Uniswap V3 Pools](https://dune.com/coindataschool/curated-uniswap-v3-pools-volume-fees-tvl-and-fee-apr)
 
+Look up the performance metrics of your closed Uniswap V3 LP positions on Arbitrum:
+
+- [ETH-USDC](https://dune.com/coindataschool/arbi-univ3-roi-eth-usdc)
+- [ETH-USDT](https://dune.com/coindataschool/arbi-univ3-roi-eth-usdt)
+- [ARB-USDC](https://dune.com/coindataschool/arbi-univ3-roi-arb-usdc)
+- [ARB-USDT](https://dune.com/coindataschool/arbi-univ3-roi-arb-usdt)
+- [ARB-ETH](https://dune.com/coindataschool/arbi-univ3-roi-arb-eth)
+- [GMX-USDC](https://dune.com/coindataschool/arbi-univ3-roi-gmx-usdc)
+- [GMX-ETH](https://dune.com/coindataschool/arbi-univ3-roi-gmx-eth)
+- [MCB-USDC](https://dune.com/coindataschool/arbi-univ3-roi-mcb-usdc)
+- [MCB-ETH](https://dune.com/coindataschool/arbi-univ3-roi-mcb-eth)
+- [STG-ETH](https://dune.com/coindataschool/arbi-univ3-roi-stg-eth)
+- [All in one](https://dune.com/coindataschool/univ3-lp-roi-calculator)
+
 Apps:
 
-- [Forecast ROI and Fee APR of Univ3 WETH-GMX positions on Arbitrum](https://coindataschool-univ3-roi-prediction-weth-gmx-main-ponc95.streamlit.app/)
+- [Forecast ROI and Fee APR of Univ3 WETH-GMX positions on Arbitrum](https://coindataschool-univ3-roi-prediction-weth-gmx-main-spynrp.streamlit.app/)
 - [Forecast ROI and Fee APR of Univ3 WETH-WBTC positions on Mainnet](https://coindataschool-univ3-roi-prediction-wbtc-weth-main-oufzxi.streamlit.app/)
 
 Articles:
