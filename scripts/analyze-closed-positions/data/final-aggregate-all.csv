@@ -1,0 +1,2 @@
+wallet,pair,capital,start_time,stop_time,duration,closed_position_cnt,total_fees_less_gas,total_pnl,fee_apr,total_apr,daily_fees,daily_pnl
+wallet1,ETH-USDC,10000,2023-04-03 13:27:53+00:00,2023-05-01 15:16:54+00:00,28.075706018518517,2,77.56571246182722,3001.6650763634893,0.1008397973318744,3.902333754848478,2.762734173476011,106.91325355749254
