@@ -1,5 +1,8 @@
 # How to Run the Scripts
 
+0. Create an [API key](https://dune.com/settings/api) at Dune Analytics. Put 
+this line `export DUNE_API_KEY='xxxxxxxxxxxxxxxxxxx'` inside your .zshrc or .bashrc file,
+replacing `xxxxxxxxxxxxxxxxxxx` with your actual dune api key.
 1. Change the input section of `01-query-data-multi-v3lps.py` (or `01-query-data-one-v3lp.py`). Run it in terminal. This will download the performance metrics of your closed univ3 LP position and save them under `/data`.
     - `python 01-query-data-multi-v3lps.py`
     - `python 01-query-data-one-v3lp.py`
