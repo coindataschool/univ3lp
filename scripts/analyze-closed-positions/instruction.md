@@ -28,11 +28,14 @@ the performance metrics and save the outout under `/data`.
     ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/screens/print-out-04-aggregate-GMX-pairs.png)
 
     - `python 04-aggregate-MCB-pairs.py`
+
     ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/screens/print-out-04-aggregate-MCB-pairs.png)
 
     - `python 04-aggregate-STG-pairs.py`
+
     ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/screens/print-out-04-aggregate-STG-pairs.png)
 
 2. Aggregate across all wallets and output a `final-aggregate-all.csv` file under `/data`.
     - `python 05-aggregate-all.py`
+
     ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/screens/print-out-05-aggregate-all.png)
