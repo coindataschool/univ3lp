@@ -12,13 +12,13 @@ from dune_client.query import Query
 
 # --- BEGIN Input --- #
 
-pair = 'ETH-USDC'        # v3 LP pair on Arbitrum. The right coin should always
+pair = 'ARB-USDC'        # v3 LP pair on Arbitrum. The right coin should always
     # be USDC, USDT, or ETH, and the left coin should always be a volatile coin.
     # For example, 'ETH-USDC' is valid but 'USDC-ETH' is not;
     # 'ARB-USDT' is valid but 'USDT-ARB' is not;
     # 'ARB-ETH' is valid but 'ETH-ARB' is not. 
 wallet_name = 'wallet2'  # name of your wallet
-nft_id = 573765          # V3 NFT id of your closed position
+nft_id = 508104          # V3 NFT id of your closed position
 
 # --- END Input --- #
 
@@ -31,22 +31,22 @@ if pair == 'ETH-USDC':
     qid = 2331962
 elif pair == 'ETH-USDT':
     qid = 2449148    
-elif pair == 'STG-ETH':
-    qid = 2438599
-elif pair == 'GMX-USDC':
-    qid = 2394629
-elif pair == 'GMX-ETH':
-    qid = 2394607
 elif pair == 'ARB-ETH':
     qid = 2372846
-elif pair == 'ARB-USDT':
-    qid = 2372824
 elif pair == 'ARB-USDC':
     qid = 2372781
+elif pair == 'ARB-USDT':
+    qid = 2372824
+elif pair == 'GMX-ETH':
+    qid = 2394607
+elif pair == 'GMX-USDC':
+    qid = 2394629
 elif pair == 'MCB-ETH':
     qid = 2449102
 elif pair == 'MCB-USDC':    
     qid = 2449112
+elif pair == 'STG-ETH':
+    qid = 2438599
 else:
     qid = None
 

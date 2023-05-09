@@ -18,7 +18,7 @@ pair = 'ETH-USDC'           # v3 LP pair on Arbitrum. The right coin should
     # 'ARB-USDT' is valid but 'USDT-ARB' is not;
     # 'ARB-ETH' is valid but 'ETH-ARB' is not. 
 wallet_name = 'wallet1'     # name of your wallet
-nft_ids = [489349, 586698,] # a list of V3 NFT ids of your closed positions
+nft_ids = [489349, 586698,] # list of V3 NFT ids of your closed positions
 
 # --- END Input --- #
 
@@ -30,23 +30,23 @@ os.makedirs(data_dir, exist_ok=True)
 if pair == 'ETH-USDC':
     qid = 2331962
 elif pair == 'ETH-USDT':
-    qid = 2449148
-elif pair == 'STG-ETH':
-    qid = 2438599
-elif pair == 'GMX-USDC':
-    qid = 2394629
-elif pair == 'GMX-ETH':
-    qid = 2394607
+    qid = 2449148    
 elif pair == 'ARB-ETH':
     qid = 2372846
-elif pair == 'ARB-USDT':
-    qid = 2372824
 elif pair == 'ARB-USDC':
     qid = 2372781
+elif pair == 'ARB-USDT':
+    qid = 2372824
+elif pair == 'GMX-ETH':
+    qid = 2394607
+elif pair == 'GMX-USDC':
+    qid = 2394629
 elif pair == 'MCB-ETH':
     qid = 2449102
 elif pair == 'MCB-USDC':    
-    qid = 2449112    
+    qid = 2449112
+elif pair == 'STG-ETH':
+    qid = 2438599
 else:
     qid = None
 

@@ -1,27 +1,33 @@
-import pandas as pd 
+import pandas as pd
 from dataprep import load_n_prep_data
+import pickle
 
 # --- BEGIN Input --- #
 
 wallet_name = 'wallet1'
-pairs = ['GMX-USDC', 'GMX-ETH'] # if you don't have one of the
+pairs = ['ETH-USDC', 'ETH-USDT',] # if you don't have one of the
     # pairs in your closed position, remove it from the list and remove the 
     # corresponding columns in the `COLS` list below.
 
 # --- END Input --- #
 
 # load and clean data
-df = pd.concat([load_n_prep_data(wallet_name, pair) for pair in pairs])\
-       .fillna(0)
+with open('../data/current_prices.pickle', 'rb') as handle:
+    prices = pickle.load(handle)
+current_eth_price = prices.loc[prices['symbol'] == 'WETH', 'price'][0]
+df = pd.concat([
+    load_n_prep_data(wallet_name, pair, current_eth_price) 
+    for pair in pairs
+]).fillna(0)
 
 # re-order the columns and write out csv file
 COLS = [
     'nft_id', 'open_datetime', 'close_datetime', 'duration_days',
-    'sent_gmx', 'sent_eth', 'sent_usdc', 
-    'withdrawn_gmx', 'withdrawn_eth', 'withdrawn_usdc', 
-    'lp_delta_gmx', 'lp_delta_eth', 'lp_delta_usdc', 
-    'fees_gmx', 'fees_eth', 'fees_usdc', 'gas_eth',
-    'pnl_gmx', 'pnl_eth', 'pnl_usdc', 
+    'sent_eth', 'sent_usdc', 'sent_usdt', 
+    'withdrawn_eth', 'withdrawn_usdc', 'withdrawn_usdt', 
+    'lp_delta_eth', 'lp_delta_usdc', 'lp_delta_usdt',
+    'fees_eth', 'fees_usdc', 'fees_usdt',
+    'gas_eth', 'pnl_eth', 'pnl_usdc', 'pnl_usdt', 
     'investment_opentime_usd_value', 
     'pnl_closetime_usd_value', 'investment_closetime_usd_value', 
     'closetime_APR', 'closetime_daily_PnL', 

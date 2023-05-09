@@ -1,9 +1,9 @@
-from prices import current_arb_price
 from dataprep import aggregate_ethStable_altStable_altEth
+import pickle
 
 # --- BEGIN Input --- #
 
-wallet_name = 'wallet1'
+wallet_name = 'wallet2'
 pair = 'ARB-pairs'
 capital_arb = 10000          # How many ARB did you use to LP?
 capital_eth = 0              # How many ETH did you use to LP?
@@ -17,12 +17,17 @@ airdrop_claim_gas_eth = -(0) # non-positive, gas for airdrop claim
 
 # --- END Input --- #
 
+# load current prices
+with open('../data/current_prices.pickle', 'rb') as handle:
+    prices = pickle.load(handle)
+current_eth_price = prices.loc[prices['symbol'] == 'WETH', 'price'][0]
+current_arb_price = prices.loc[prices['symbol'] == 'ARB', 'price'][0]
 
 # main
 transfer_cost_usd = transfer_cost_usdc + transfer_cost_usdt
 other_gas_eth = approve_gas_eth + failed_mint_gas_eth + airdrop_claim_gas_eth
 aggregate_ethStable_altStable_altEth(
     wallet_name, pair, transfer_cost_usd, other_gas_eth, 
-    capital_eth, capital_usdc, capital_usdt, 
-    capital_alt=capital_arb, current_alt_price=current_arb_price
+    capital_eth, capital_usdc, capital_usdt, capital_arb, 
+    current_eth_price, current_arb_price
 )
