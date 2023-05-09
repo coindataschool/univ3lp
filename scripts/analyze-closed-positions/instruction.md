@@ -17,7 +17,7 @@ the performance metrics and save the outout under `/data`.
     - `python 03-clean-data-GMX-pairs.py`
     - `python 03-clean-data-MCB-pairs.py`
     - `python 03-clean-data-STG-pairs.py`
-1. Aggregate across all closed positions of the same volatile coin under the same wallet.
+1. Aggregate across all closed positions of a volatile coin under the same wallet.
     - `python 04-aggregate-ARB-pairs.py`
 
     ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/screens/print-out-04-aggregate-ARB-pairs.png)
