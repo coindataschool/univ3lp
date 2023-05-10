@@ -1,13 +1,12 @@
 import pandas as pd
 import pickle 
-import os 
 
 def load_n_prep_data(wallet, pair, current_eth_price, current_ltcoin_price=None):
     """ Read data, drop useless cols and add new cols. """
     
     fname = f'../data/arbi-univ3lp-perf-{wallet}-{pair}.csv'
     df = pd.read_csv(fname, parse_dates=['open_datetime', 'close_datetime'], 
-                    infer_datetime_format=True)
+                     infer_datetime_format=True)
     # drop useless cols
     df = df.loc[:, ~df.columns.str.contains('current|ROI|price')]
     
@@ -97,14 +96,8 @@ def aggregate_ethStable_altStable_altEth(
     timediff = df['close_datetime'].max() - df['open_datetime'].min()
     dur_days = timediff.days + timediff.seconds/3600/24
     print("Duration:", '{:.2f} days'.format(dur_days))
-    if alt_coin != 'ETH':
-        print(f'Current {alt_coin} Price:', current_alt_price)
-    print(f'Current ETH Price:', current_eth_price)
-    print('At Current Prices,')
-    print('  - Total Fees less Gas:', '${:.2f}'.format(fees_less_gas)) 
-    print('  - Total PnL:', '${:.2f}'.format(pnl))
 
-    # calc fee APR, total APR, daily fees, and daily PnL
+    # calc performance metrics at current prices
     if alt_coin == 'ETH':
         capital = current_eth_price * capital_eth\
             + capital_usdc + capital_usdt
@@ -114,10 +107,19 @@ def aggregate_ethStable_altStable_altEth(
             + capital_usdc + capital_usdt
     fee_apr = fees_less_gas / capital / dur_days * 365
     tot_apr = pnl / capital / dur_days * 365
-    print('  - Fee APR:', '{:.2f}%'.format(fee_apr*100))
-    print('  - Total APR:', '{:.2f}%'.format(tot_apr*100))
     daily_fees = fees_less_gas / dur_days
     daily_pnl = pnl / dur_days
+
+    # print
+    if alt_coin != 'ETH':
+        print(f'Current {alt_coin} Price:', current_alt_price)
+    print(f'Current ETH Price:', current_eth_price)    
+    print('At Current Prices,')
+    print('  - Total Capital:', '${:.2f}'.format(capital)) 
+    print('  - Total Fees less Gas:', '${:.2f}'.format(fees_less_gas)) 
+    print('  - Total PnL:', '${:.2f}'.format(pnl))
+    print('  - Fee APR:', '{:.2f}%'.format(fee_apr*100))
+    print('  - Total APR:', '{:.2f}%'.format(tot_apr*100))
     print('  - Daily Fees:', '${:.2f}'.format(daily_fees))
     print('  - Daily PnL:', '${:.2f}'.format(daily_pnl))
 
