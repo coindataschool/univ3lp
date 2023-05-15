@@ -26,7 +26,7 @@ df = pd.concat(lst).sort_values('daily_fees', ascending=False)
 df.to_csv(os.path.join(data_dir, 'final-aggregate-all.csv'), index=False)
 
 # load current eth price
-with open('../data/current_prices.pickle', 'rb') as handle:
+with open(os.path.join(data_dir, 'current_prices.pickle'), 'rb') as handle:
     prices = pickle.load(handle)
 current_eth_price = prices.loc[prices['symbol'] == 'WETH', 'price'][0]
 
