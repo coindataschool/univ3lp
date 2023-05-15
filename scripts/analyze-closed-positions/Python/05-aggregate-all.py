@@ -38,7 +38,7 @@ fees_less_gas = df['total_fees_less_gas'].sum()
 pnl = df['total_pnl'].sum()
 # remove multiple counting of the same capital due to re-usage
 capital = df['capital'].sum() - capital_reused_usd\
-    - capital_reused_usd * current_eth_price
+    - capital_reused_eth * current_eth_price
 print("Duration:", '{:.2f} days'.format(dur_days))
 print('At Current Prices,')
 print('  - Total Capital:', '${:.2f}'.format(capital)) 
