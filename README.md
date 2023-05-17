@@ -44,4 +44,4 @@ Articles:
 
 Book:
 
-- [Master the art of Uniswap V3 LP](https://twitter.com/coindataschool/status/1658033627035471872).
+- [Master the art of Uniswap V3 LP](https://twitter.com/coindataschool/status/1658033627035471872)
