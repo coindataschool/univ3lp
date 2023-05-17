@@ -42,6 +42,6 @@ Articles:
 - [AR, MA, and ARMA, When to Use Which?](https://open.substack.com/pub/coindataschool/p/ar-ma-and-arma-when-to-use-which?r=1ly8yy&utm_campaign=post&utm_medium=web)
 - [Forecast MATIC price in the next 1, 2, 3 hours with ARIMA](https://coindataschool.substack.com/p/univ3-strategy-part-6-wmatic-usdc)
 
-Guide:
+Book:
 
-- Our UniV3 Guide is out and you can purchase [here](https://twitter.com/coindataschool/status/1613886358938058752).
+- [Master the art of Uniswap V3 LP](https://twitter.com/coindataschool/status/1658033627035471872).
