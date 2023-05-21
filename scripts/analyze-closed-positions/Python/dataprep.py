@@ -26,19 +26,19 @@ def load_n_prep_data(wallet, pair, current_eth_price, current_ltcoin_price=None)
             + current_eth_price * df['pnl_eth']\
             + df[pnl_col_rtcoin]
         df['investment_current_usd_value'] =\
-            current_ltcoin_price * df[sent_col_ltcoin] + df[sent_col_rtcoin]
+            -(current_ltcoin_price * df[sent_col_ltcoin] + df[sent_col_rtcoin])
     if ltcoin != 'ETH' and rtcoin == 'ETH':
         df['pnl_current_usd_value'] =\
             current_ltcoin_price * df[pnl_col_ltcoin]\
             + current_eth_price * df['pnl_eth']    
         df['investment_current_usd_value'] =\
-            current_ltcoin_price * df[sent_col_ltcoin]\
-            + current_eth_price * df['sent_eth']
+            -(current_ltcoin_price * df[sent_col_ltcoin] 
+              + current_eth_price * df['sent_eth'])
     if ltcoin == 'ETH' and rtcoin in ['USDC', 'USDT']:
         df['pnl_current_usd_value'] =\
             current_eth_price * df['pnl_eth'] + df[pnl_col_rtcoin]
         df['investment_current_usd_value'] =\
-            current_eth_price * df['sent_eth'] + df[sent_col_rtcoin]
+            -(current_eth_price * df['sent_eth'] + df[sent_col_rtcoin])
             
     roi = df['pnl_current_usd_value'] / df['investment_current_usd_value']
     df['current_APR'] = roi / df['duration_days'] * 365
