@@ -17,7 +17,7 @@ the performance metrics and save the outout under `/data`.
     - `python 03-clean-data-GMX-pairs.py`
     - `python 03-clean-data-MCB-pairs.py`
     - `python 03-clean-data-STG-pairs.py`
-1. Aggregate across all closed positions of a volatile coin under the same wallet.
+4. Aggregate across all closed positions of a volatile coin under the same wallet.
     - `python 04-aggregate-ARB-pairs.py`
 
     ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/screens/print-out-04-aggregate-ARB-pairs.png)
@@ -38,7 +38,13 @@ the performance metrics and save the outout under `/data`.
 
     ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/screens/print-out-04-aggregate-STG-pairs.png)
 
-2. Aggregate across all wallets and output a `final-aggregate-all.csv` file under `/data`.
+5. Aggregate across all wallets and output a `final-aggregate-all.csv` file under `/data`.
     - `python 05-aggregate-all.py`
 
     ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/screens/print-out-05-aggregate-all.png)
+
+6. Analyze your best plays and output png files under `/png`. 
+   - `python 06-analyze-best-plays.py`
+
+    ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/png/top10-by-closetime-APR-ETH-pairs.png)
+    ![](https://github.com/coindataschool/univ3lp/blob/main/scripts/analyze-closed-positions/png/top10-by-pnl-closetime-ETH-pairs.png)
